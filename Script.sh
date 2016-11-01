@@ -286,6 +286,7 @@ if [ "x$ERROR" = "x1" ] ; then
 	exit 1
 fi
 
+if [ -n "$1" ]; then $1; else
 clear
 printf "%s" "Do you want to clean out all your current projects (y/N)? "
 read INPUT
@@ -304,3 +305,4 @@ do
 	restart
 done
 exit 0
+fi
