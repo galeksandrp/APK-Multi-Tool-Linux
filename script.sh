@@ -840,6 +840,10 @@ echo -n "Initializing ADBD... "
 # adbd=$(adb start-server)	# Start ADB Daemon
 echo "Done."
 
+if [ -n "$1" ]; then
+fileName=$2
+$1
+else
 # clear
 reset
 while [ "1" = "1" ] ;
@@ -847,3 +851,4 @@ do
 	restart
 done
 exit 0
+fi
